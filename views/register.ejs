@@ -72,7 +72,8 @@
           <div class="card-body">
             <h5 class="card-title text-center"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</h5>
             
-         
+            <%- include('partials/messages.ejs') %>
+
 
             <form class="form-signin" method="POST" action="/users/register">
               <div class="form-label-group mb-4">
@@ -98,8 +99,8 @@
               </div>
 
               <div class="form-label-group mb-4 mt-1">
-                  <label for="inputSecret">Kod Admin</label>
-                  <input type="button" name="secretCode" id="secretCode" class="form-control btn btn-warning" value="Daftar sebagai Guru" onfocusout="chgToBtn()" > 
+                  <label for="inputSecret">Daftar sebagai Guru</label>
+                  <input type="button" name="secretCode" id="secretCode" class="form-control btn btn-primary  " value="Kod Guru" onfocusout="chgToBtn()" > 
                   <script>
                   let daftarGuru = document.getElementById('secretCode');
                   daftarGuru.addEventListener('click', () => {
