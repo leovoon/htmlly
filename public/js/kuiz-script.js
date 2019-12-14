@@ -89,13 +89,16 @@ function endQuiz() {
             else {
                 questionResult = '<span style="color: red;"><i class="fas fa-times-circle"></i></span>';
             }
-            output = output + '<tr><td>Question'+ ' ' +  (i+1) + '</td> ' + '<td>' + questionResult + '</td></tr>';
+            output = output + `<tr><td>Question ${i+1} <p class="lead">${data.quizcontent[i].question}</p></td> <td> ${questionResult} </td></tr>`
+        
+    
         }
         output = `<p class='d-flex align-self-center mr-3'>Anda mendapat <h1 class='text-result'>${numOfCorrect} / ${lengthofobject}</h1></p><br>${output} </tbody></table>`;
         document.getElementById("quizContent").innerHTML = output;
         btnPrevious.classList.add('hide');
         btnFinish.classList.add('hide');
         btnRepeat.classList.remove('hide');
+        progressBar.classList.add('hide');
         
         
     }
@@ -106,7 +109,7 @@ function endQuiz() {
 
 function checkPage(i) {
    // add remove disabled buttons if there are no more questions in que
-   
+    
    if(curPage==0) {
        btnPrevious.classList.add("hide");
    }

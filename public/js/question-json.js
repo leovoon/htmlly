@@ -2,16 +2,16 @@ data = {
     quizcontent: [
       {
         question: "1. Yang manakah tag HTML yang memberi tajuk kepada dokumen HTML?",
-        image: "meta/intr1.png",
+        image: "kuiz/ls-1.png",
         correct: 2,
-        a1: "&lt;tajuk></tajuk>",
-        a2: "&lt;title></title>",
-        a3: "&lt;Title></itle>",
-        a4: "&lt;head></head>"
+        a1: "&lt;tajuk>&lt;/tajuk>",
+        a2: "&lt;title>&lt;/title>",
+        a3: "&lt;Title>&lt;/itle>",
+        a4: "&lt;head>&lt;/head>"
       },
       {
         question: "2. <_____> Saya suka belajar HTML &lt;/p>", //<__>saya suka belajar html </p>
-        image: "meta/intr2.jpg",
+        image: "kuiz/ls-2.png",
         correct: 3,
         a1: "p",
         a2: "head",
@@ -19,8 +19,8 @@ data = {
         a4: "&lt;p>"
       },
       {
-        question: "3. <head><title></title><_____>",  // 
-        image: "meta/intr3.jpg",
+        question: "3. &lt;head>&lt;title>&lt;/title>&lt;_____>",  // 
+        image: "kuiz/ls-3.png",
         correct: 3,
         a1: "title",
         a2: "head",
@@ -29,7 +29,7 @@ data = {
       },
       {
         question: "4. Dokumen HTML perlu disimpan dalam format fail _______ .",
-        image: "meta/intr4.jpg",
+        image: "kuiz/ls-4.jpg",
         correct: 2,
         a1: "WWW",
         a2: ".html",
@@ -39,7 +39,7 @@ data = {
       },
       {
         question: "5. Dokumen HTML WAJIB ada elemen __________. ",
-        image: "meta/intr5.jpg",
+        image: "kuiz/ls-5.jpg",
         correct: 1,
         a1: "paragraph",
         a2: "html",
@@ -50,7 +50,7 @@ data = {
       },
       {
         question: "6. HTML ialah __________ .",
-        image: "meta/intr6.jpg",
+        image: "kuiz/ls-6.png",
         correct: 2,
         a1: "Hypertext Machine Language",
         a2: "Hypertext Markup Language",
@@ -59,7 +59,7 @@ data = {
       },
       {
         question: "7. Pilih pelayar yang boleh memaparkan dokumen HTML kepada laman web",
-        image: "meta/intr7.jpg",
+        image: "kuiz/ls-7.jpg",
         correct: 1,
         a1: "Microsoft Edge",
         a2: "Notepad",
@@ -67,18 +67,18 @@ data = {
         a4: "Google Map"
       },
       {
-        question: "8. Pilih penerangan yang betul.",
-        image: "meta/intr8.jpg",
+        question: "8. Pilih penerangan yang BETUL.",
+        image: "kuiz/ls-8.png",
         correct: 1,
-        a1: "Penggunaan huruf besar adalah dibenarkan dalam HTML",
-        a2: "&lt;!DOCTYPE html> perlu ditulis dalam tag &lt;body>",
-        a3: "Tag paragraph berfungsi untuk memstrukturkan text kepada butang",
-        a4: "Jarak antara tag-tag HTML adalah peka besar-kecil huruf"
+        a1: "Penggunaan huruf besar adalah dibenarkan dalam HTML.",
+        a2: "&lt;!DOCTYPE html> perlu ditulis dalam tag &lt;body>.",
+        a3: "Tag paragraph berfungsi bagi memstrukturkan text kepada <strong>bold</strong>.",
+        a4: "Jarak antara tag-tag HTML adalah peka besar-kecil huruf."
       },
       {
         question:
           "9. Berapakah tags yang ada dalam suatu elemen HTML?",
-        image: "meta/intr9.jpg",
+        image: "kuiz/ls-9.png",
         correct: 3,
         a1: "3",
         a2: "1",
@@ -87,7 +87,7 @@ data = {
       },
       {
         question: "10. Apakah perbezaan antara tag pembuka dan tag penutup?",
-        image: "meta/intr10.jpg",
+        image: "kuiz/ls-10.png",
         correct: 3,
         a1: "Tag pembuka mempunyai / di belakang",
         a2: "Tag pembuka mempunyai / di hadapan",
