@@ -77,7 +77,7 @@ function moveNext() {
 
 function endQuiz() {
     if(myAnswers[lengthofobject-1]) {
-        var output = "<table class='table table-hover output'><thead><tr><th>Soalan</th><th>Keputusan</th></tr></thead><tbody>";
+        var output = "<table id='resultTable' class='table table-hover output'><thead><tr><th>Soalan</th><th>Keputusan</th></tr></thead><tbody>";
         var questionResult = "NA";
         //console.log('Quiz Over');
         for( var i = 0; i< myAnswers.length; i++) {

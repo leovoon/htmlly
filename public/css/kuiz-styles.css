@@ -31,7 +31,11 @@
 }
 .output {
     font-size:20px;
+    
 }
+
+
+
 .glyphicon-ok-circle {
     color:#00FF64;
 }
@@ -41,4 +45,8 @@
 .selAnswer {
     background: #4E9267;
     border-radius: 5px;
+}
+
+#quizimage {
+    border : solid 1px rgb(134, 134, 134);
 }
