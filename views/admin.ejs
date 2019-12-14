@@ -1,0 +1,124 @@
+<div class="sidenav">
+  <img class="logo" src="/img/logo.png" alt="logo">
+  <a href="/admin" class="sidenav-item1">
+    <h4>Welcome</h4>
+  </a>
+  <a href="/admin/user" class="sidenav-item2">
+    <h4>Pelajar</h4>
+  </a>
+  <a href="/admin/teacher" class="sidenav-item3">
+    <h4>Guru</h4>
+  <a href="/admin/profile" class="sidenav-item3">
+    <h4>Profile </h4>
+  </a>
+
+
+
+  <button type="button" href="/admin/logout" class="btn btn-secondary btn-sm ml-3 mt-3"><i
+      class="fas fa-sign-out-alt mr-2"></i>Logout</button>
+</div>
+
+<div class="main-nav">
+
+  <h3 class="my-4 mx-3 pt-2">All Users</h3>
+<div class="<div class="container-fluid table-responsive    ">
+  <table class="table   user-table">
+    <thead>
+      <th>Name</th>
+      <th>Email</th>
+      <th>isTeacher</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% newlistUser.forEach(newlistUser => { %>
+      <tr>
+        <td><%=newlistUser.name %></td>
+        <td><%=newlistUser.email %></td>
+        <td><%=newlistUser.isTeacher %></td>
+        <td><a>
+            <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+          <a><i class="fa fa-trash" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+      <% }); %>
+
+      <tr></tr>
+    </tbody>
+  </table>
+
+</div>
+ 
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+   
+    <h3 class="my-4 mx-3 pt-2">Add User</h3>
+    <form class="form-signin" method="POST" action="/admin">
+      <div class="form-label-group mb-3"><label for="inputEmail">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required
+          autofocus>
+
+      </div>
+
+      <div class="form-label-group mb-4"><label for="inputPassword">Kata Laluan</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Kata Laluan"
+          required>
+
+      </div>
+
+
+      <div class="form-group">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" name="admin" value="isTeacher" class="custom-control-input" id="customSwitch1"
+            checked="">
+          <label class="custom-control-label" for="customSwitch1">Teacher</label>
+        </div>
+
+
+        <button class="btn btn-lg btn-info btn-block text-uppercase mt-3" type="submit">Add</button>
+        <hr class="my-4">
+
+
+    </form>
+    </div>
+    <div class="col">
+      <h3 class="my-4  pt-2">Add New Admin</h3>
+    <form class="form-signin" method="POST" action="/admin">
+      <div class="form-label-group mb-3"><label for="inputEmail">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required
+          autofocus>
+
+      </div>
+
+      <div class="form-label-group mb-4"><label for="inputPassword">Kata Laluan</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Kata Laluan"
+          required>
+
+      </div>
+
+
+      <div class="form-group">
+  <label class="col-form-label col-form-label-sm" for="inputSmall">Admin Code</label>
+  <input class="form-control form-control-sm" type="text" placeholder="" id="inputSmall">
+</div>
+
+
+        <button class="btn btn-lg btn-info btn-block text-uppercase mt-3" type="submit">Add</button>
+        <hr class="my-4">
+
+
+    </form>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+
+
+</div>

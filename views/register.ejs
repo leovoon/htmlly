@@ -1,0 +1,131 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img class="logo" src="/img/logo.png" alt="logo"></a>    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarColor03"
+      aria-controls="navbarColor03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse "  id="navbarColor03">
+      <div class="navbar-nav flex-column-reverse flex-md-row justify-content-center">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="/"
+            >Home <span class="sr-only"></span></a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Belajar
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="lesson1">1. Pengenalan HTML</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Coming Soon</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/kuiz">Kuiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/chat">Chat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/info">Info</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/codeplay" style="width: 140px;">Text Editor</a>
+          </li>
+
+
+         </ul>
+  
+         <ul id="mobileNav" class="navbar-nav flex-row justify-content-center">
+         <li class="nav-item "> <a class="register-btn btn btn-primary " href="/users/register"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</a></li>  
+         <li class="nav-item"> <a class="login-btn btn btn-success ml-2" href="/users/login"><span style="font-size: 1em; "><i class="fas fa-sign-in-alt mr-2"></i></i></span>Login</a> </li>
+        </ul>
+      
+        </div>
+  
+           
+            
+      </div>
+  </nav>
+<main>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5 animated fadeIn delay-0.5s">
+          <div class="card-body">
+            <h5 class="card-title text-center"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</h5>
+            
+         
+
+            <form class="form-signin" method="POST" action="/users/register">
+              <div class="form-label-group mb-4">
+                  <label for="inputEmail">Nama<span class="star">*</span></label>
+                <input type="name" name="name"  class="form-control text-capitalize" placeholder="Nama Anda" value="<%= typeof name != 'undefined' ? name : '' %>" required autofocus autocomplete="off">
+         
+              </div>
+              <div class="form-label-group mb-4 mt-1">
+                  <label for="inputEmail">Email address<span class="star">*</span></label>
+                <input type="email" name="email"  class="form-control" placeholder="Email address" value="<%= typeof email != 'undefined' ? email : '' %>" required autofocus autocomplete="off">
+         
+              </div>
+
+              <div class="form-label-group mb-4 mt-1">
+                  <label for="inputPassword">Kata Laluan<span class="star">* </span> <span style="font-size: smaller; color: grey;"><em>sekurang-kurangnya enam (6) aksara</em></span></label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Kata Laluan" value="<%= typeof password != 'undefined' ? password : '' %>" required autocomplete="off">
+               
+              </div>
+              <div class="form-label-group mb-4 mt-1">
+                  <label for="inputPassword">Kata Laluan<span class="star">*</span></label>
+                <input type="password" name="password2" id="inputPassword" class="form-control" placeholder="Konfirmasi Kata Laluan" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" required autocomplete="off">
+               
+              </div>
+
+              <div class="form-label-group mb-4 mt-1">
+                  <label for="inputSecret">Kod Admin</label>
+                  <input type="button" name="secretCode" id="secretCode" class="form-control btn btn-warning" value="Daftar sebagai Guru" onfocusout="chgToBtn()" > 
+                  <script>
+                  let daftarGuru = document.getElementById('secretCode');
+                  daftarGuru.addEventListener('click', () => {
+                    daftarGuru.type = 'text';
+                    daftarGuru.value = '';
+                  });
+                  function chgToBtn() {
+                    daftarGuru.placeholder = 'Daftar sebagai Guru';
+                    
+                  } 
+
+                  </script>
+                </div>
+
+            
+              <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Daftar</button>
+              <hr class="my-4">
+              <p class="text-right">Sudah ada akaun? <a href="/users/login"><span class="badge badge-light">Log Masuk</span>
+              </p></a>
+               
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

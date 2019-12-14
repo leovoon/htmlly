@@ -1,0 +1,336 @@
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img class="logo" src="/img/logo.png" alt="logo"></a>    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarColor03"
+      aria-controls="navbarColor03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse "  id="navbarColor03">
+      <div class="navbar-nav flex-column-reverse flex-md-row justify-content-center">
+      <ul class="navbar-nav ">
+        <li class="nav-item ">
+          <a class="nav-link" href="/"
+            >Home <span class="sr-only"></span></a
+          >
+        </li>
+        <li class="nav-item dropdown active">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Belajar
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="lesson1">1. Pengenalan HTML</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Coming Soon</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/kuiz">Kuiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/chat">Chat</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="/info">Info</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/codeplay" style="width: 140px;">Text Editor</a>
+          </li>
+
+
+         </ul>
+  
+         <ul id="mobileNav" class="navbar-nav flex-row justify-content-center">
+            
+              <li class="nav-item d-flex justify-content-center align-self-center mr-3"> 
+                 <% if (user && user.isTeacher) { %>
+              <span class="badge badge-info mr-2">Guru</span> 
+                <% } %>
+                
+                 </li>
+                <% if (user) { %>
+                  
+                  <li class="nav-item d-flex justify-content-center align-self-center mr-3"> <%= user.name %>
+                  </li> 
+                  <li><a class="logout-btn btn btn-secondary " href="/users/logout"><span style="font-size: 1em; "><i class="fas fa-sign-out-alt mr-2"></i></span>Logout</a></li>
+                  <% } else { %>
+                <li class="nav-item "> <a class="register-btn btn btn-primary " href="/users/register"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</a></li>  
+                <li class="nav-item"> <a class="login-btn btn btn-success ml-2" href="/users/login"><span style="font-size: 1em; "><i class="fas fa-sign-in-alt mr-2"></i></i></span>Login</a> </li>
+                <% } %>
+                
+
+               
+            
+              
+             
+             
+
+        
+        </ul>
+      
+        </div>
+  
+           
+            
+      </div>
+  </nav>
+
+<div class="container lesson1">
+  <div class="container text-center">   <span class="badge badge-success">Pengenalan HTML</span> <span class="badge badge-secondary objektif">4.2.2 Menggunakan tags dalam atur cara HTML :
+      &lt;	head&gt;	; &lt;	title&gt;	; &lt;	body&gt;	 dan &lt;	paragraph&gt;	.</span>
+</div>
+ 
+ <!-- SVG code -->
+ <div class="container text-center">
+    <img id="lesson1-svg" class="lesson1-img animated bounceIn slow delay-0.8s" src="/img/lesson1-img.svg" alt="pengenalan html">
+
+<div class="jumbotron jumbotron-fluid">
+  
+     
+    <h1 class="display-4 animated fadeInDown delay-1s mb-3" id="apaHTML">Apakah itu HTML?</h1><span style="font-size: 2rem; color: lightgreen;"><a href="#apaHTML"><i  class="fas fa-angle-double-down animated fadeIn delay-1s animated infinite flash slower delay-2s"></a></i></span>
+    <p class="lead text-center px-2">Dalam bab lepas, anda sudah belajar tentang kod arahan. Untuk bab ini pula, kita akan belajar kod arahan yang digunakan dalam web iaitu Kod Arahan HTML. HTML dalam bahasa Inggeris dikenali sebagai <em>Hypertext Markup Languange</em>. HTML adalah bahasa untuk membina struktur halaman Web.
+     HTML ditulis dalam Text Editor dan selepas itu dibaca dalam <em>Web Browser</em>. Elemen HTML dibentuk daripada tag-tag HTML. Dalam suatu elemen HTML mempunyai 2 tags yang sama.
+      </p>
+   
+      <!-- image here -->
+    
+     
+
+
+
+
+      <div class="videoWrapper">
+          <!-- Copy & Pasted from YouTube -->
+          <iframe class="video-embed mt-3" width="560" height="315" src="https://www.youtube.com/embed/Psk44n0zCfQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+ 
+  </div>
+
+
+ 
+   
+      
+    
+  </div>
+</div>
+</div>
+
+</div> <!-- End of Container  -->
+
+<div class="container mw-100 text-center h-50 p-3">
+    <img src = "/img/taghtml.png" class = " img-fluid rounded lesson-sub-img w-50%" alt = "tag html">
+</div>
+   
+
+
+    
+<hr class="hr-style">
+
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 addSpace"> 
+          <p class="lead"><h2>Tag HTML</h2></p>
+          Tag HTML biasanya datang secara berpasangan.
+          Tag pertama dalam pasangan adalah tag permulaan, tag yang kedua adalah tag penutup.
+          Wajib ada dalam sebuah dokumen HTML. Kesemua tag yang lain ditulis di dalam kurungan Tag HTMLini.
+
+        
+        </div>
+          <div class="col-lg-6">
+            <span class="badge badge-secondary">Contoh</span>
+          
+    
+            <div class="contoh-code">
+                    <span class="tagnamecolor" style="color:brown">
+                      <span class="tagcolor" style="color:mediumblue">
+                        &lt;</span>html<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Kandungan di sini..<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/html<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        
+          </div>
+    
+    
+
+</div>
+</div>  
+<hr class="hr-style">
+
+
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 addSpace"> 
+          <p class="lead"><h2>Tag Head</h2></p>
+          Tag Head datang secara berpasangan.
+          Kandungan dalam Tag Head tidak akan dipapar pada muka laman web.
+          Tugas Tag Head adalah untuk menyimpan metadata bagi dokumen HTML. 
+        </div>
+          <div class="col-lg-6">
+            <span class="badge badge-secondary">Contoh</span>
+          
+    
+            <div class="contoh-code">
+                    <span class="tagnamecolor" style="color:brown">
+                      <span class="tagcolor" style="color:mediumblue">
+                        &lt;</span>head<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Maklumat seperti tajuk website.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/head<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        
+          </div>
+    
+
+</div>
+</div>  
+<hr class="hr-style">
+
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 addSpace"> 
+          <p class="lead"><h2>Tag Title</h2></p>
+          Tag Title memberi tajuk kepada sesebuah dokumen HTML.
+          Tag Title perlu ditulis dalam Tag Head. Tajuk tidak akan papar dalam badan laman web. Tajuk akan muncul pada Tab pelayar/Web Browser.
+        </div>
+          <div class="col-lg-6">
+            <span class="badge badge-secondary">Contoh</span>
+          
+    
+            <div class="contoh-code">
+                    <span class="tagnamecolor" style="color:brown">
+                      <span class="tagcolor" style="color:mediumblue">
+                        &lt;</span>title<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Tajuk website di sini..<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/title<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        
+          </div>
+    
+    
+
+</div>
+</div>  
+<hr class="hr-style">
+
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 addSpace"> 
+          <p class="lead"><h2>Tag Body</h2></p>
+          Tag Body mengandungi semua kandungan dokumen HTML, seperti teks, pautan, imej, jadual, senarai, dan Coming Soon.
+          Semua kandungan dalam Tag Body akan dipapar ke laman web.
+        </div>
+          <div class="col-lg-6">
+            <span class="badge badge-secondary">Contoh</span>
+          
+    
+            <div class="contoh-code">
+                    <span class="tagnamecolor" style="color:brown">
+                      <span class="tagcolor" style="color:mediumblue">
+                        &lt;</span>body<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Kandungan di sini...<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        
+          </div>
+    
+    
+</div>
+</div>
+
+<hr class="hr-style">
+
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6"> 
+          <p class="lead"><h2>Tag Paragraph</h2></p>
+          Tag Paragraph biasanya datang secara berpasangan.
+          Tag Paragraph adalah tag untuk menulis ayat perenggan.
+        </div>
+          <div class="col-lg-6">
+            <span class="badge badge-secondary">Contoh</span>
+          
+    
+            <div class="contoh-code">
+                    <span class="tagnamecolor" style="color:brown">
+                      <span class="tagcolor" style="color:mediumblue">
+                        &lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Ayat perenggan di sini..<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        
+          </div>
+    
+    
+</div>
+</div>
+
+<div class="container mw-100 text-center h-50 p-3 mb-3">
+    <img src = "/img/elemen.png" class = "img-fluid rounded lesson-sub-img" alt = "elemen html">
+  </div>
+<div class="container mw-100 text-center h-50 p-3">
+    <img src = "/img/struktur.png" class = "img-fluid rounded lesson-sub-img" alt = "standard struktur html">            
+</div>
+   
+
+
+  
+
+
+
+
+<hr class="hr-style">
+
+
+
+
+<div class="container cuba-sendiri mb-5 mt-5">
+    <h3>Jom Try! <i class="fas fa-code"></i> Be Creative! 👨‍💻  </h3>
+    <div class="alert alert-dismissible alert-danger animated pulse infinite slow delay-2s">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Tahukah anda cara menulis tag <em>paragraph</em> ?
+      </div>
+    <div class="row ">
+        
+      <div id="text-editor-row" class="col-lg-6 addSpace">
+          <span class="badge badge-info">Text Editor</span>
+        <div id="codeEditor"></div>
+      </div>
+      <div class="col-lg-6 web-frame">
+        <div class="web-ui">
+            <span class="dot3"></span>
+            
+            <span class="dot2"></span>
+            <span class="dot"></span>
+            <span class="bar">www</span>
+           </div>
+          <span class="badge badge-info">Web Browser</span>
+        <iframe id="codeResult" frameBorder="0"></iframe></div>
+  </div>
+  
+  
+
+<div class="container mt-4 d-flex justify-content-center align-self-center">
+  <a href="/kuiz" class="btn btn-primary mb-5 mt-5"><i class="fas fa-poll-h "></i> Jawab Kuiz </a>
+
+</div>
+
+<!-- Pagination -->
+<div class="container d-flex justify-content-center mb-5">
+    <ul class="pagination pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="#">&laquo;</a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+     
+      <li class="page-item disabled">
+        <a class="page-link" href="#">&raquo;</a>
+      </li>
+    </ul>
+  </div>
+

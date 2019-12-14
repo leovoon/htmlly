@@ -1,0 +1,70 @@
+
+//////////////////// Get Routes ////////////////////
+app.get("/", function(req, res) {
+  res.render("index");
+});
+
+app.get("/lesson1", function(req, res) {
+  res.render("lesson1");
+});
+
+app.get("/login", function(req, res) {
+  res.render("login");
+});
+
+app.get("/register", function(req, res) {
+  res.render("register");
+});
+
+app.get("/kuiz", function(req, res) {
+  res.render("kuiz");
+});
+
+app.get("/chat", function(req, res) {
+  res.render("chat");
+});
+
+app.get("/info", function(req, res) {
+  res.render("info");
+});
+
+app.get("/contact-form", function(req, res) {
+  res.render("contact-form");
+});
+
+////////////////// Post Routes ////////////////////
+app.post("/", (req, res) => {
+  "use strict";
+
+  let sender_name = req.body.name;
+  let sender_email = req.body.email;
+  let sender_subject = req.body.subject;
+  let sender_message = req.body.message;
+  // async..await is not allowed in global scope, must use a wrapper
+  async function main() {
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      service: "Gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: process.env.GMAIL_EMAIL, //  gmail user
+        pass: process.env.GMAIL_PASS //  gmail password
+      }
+    });
+
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: "sender_email", // this is ignored by Gmail
+      to: "voonlihhaur@gmail.com", // list of receivers
+      subject: `New Message from htmly : ${sender_subject}`, // Subject line
+      text: `${sender_name} (${req.body.email}) says: ${sender_message}` // plain text body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+  }
+
+  main().catch(console.error);
+  res.end(res.redirect("/contact-form"));
+});

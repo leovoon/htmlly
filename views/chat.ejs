@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img class="logo" src="/img/logo.png" alt="logo"></a>    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarColor03"
+      aria-controls="navbarColor03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse "  id="navbarColor03">
+      <div class="navbar-nav flex-column-reverse flex-md-row justify-content-center">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="/"
+            >Home <span class="sr-only"></span></a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Belajar
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="lesson1">1. Pengenalan HTML</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Coming Soon</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/kuiz">Kuiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/chat">Chat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/info">Info</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="/codeplay" style="width: 140px;">Text Editor</a>
+          </li>
+
+
+         </ul>
+  
+         <ul id="mobileNav" class="navbar-nav flex-row justify-content-center">
+            
+              <li class="nav-item d-flex justify-content-center align-self-center mr-3"> 
+                <% if (user && user.isTeacher) { %>
+              <span class="badge badge-info mr-2">Guru</span>
+              <% } %>
+              <li class="nav-item d-flex justify-content-center align-self-center mr-3"> <%= user.name %>
+              </li> 
+              <li><a class="logout-btn btn btn-secondary " href="/users/logout"><span style="font-size: 1em; "><i class="fas fa-sign-out-alt mr-2"></i></span>Logout</a></li>
+              
+              </li>
+              
+            
+
+
+        
+        </ul>
+      
+        </div>
+  
+           
+            
+      </div>
+  </nav>
+
+
+
+<main>
+    <div class="container-fluid expandChat">
+      
+      
+            <div class="centered-form__box">
+                <h1>Chat</h1>
+                <form action="/chatRoom"  class="form-chat">
+                    <label>Nama</label>
+                    <% if (user && user.isTeacher) { %>
+                      <input type="text" name="username" placeholder="Display name"  value="Cikgu <%= user.name %> " readonly required >
+
+                      <% } else { %>
+                    <input type="text" name="username" placeholder="Display name"  value="<%= user.name %> " readonly required >
+                     <% } %>
+                    <br><br>
+                    <label>Room</label>
+                    
+                    <input type="text" name="room" placeholder="Room" value="Pengenalan HTML" readonly required>
+                    <button type="submit" class="chatBtn">Masuk</button>
+                </form>
+            </div>
+        
+
+
+    </div>
+</main>
+
+
+
+
