@@ -1,0 +1,476 @@
+
+
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+scroll-behavior: smooth;
+}
+
+
+body {
+  position: relative;
+}
+
+/* .preload {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+      z-index: 2;
+  
+}
+
+.logo-preload {
+  animation: fade 1s ease-in-out alternate infinite;
+  height: 65px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.preload h3 {
+  animation: fade 1s ease-in;
+  font-size: 1rem;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+} */
+
+
+.daftar-btn a  {
+    text-decoration: none;
+    color: white;
+}
+
+#lesson1-svg {
+  width: 38rem;
+}
+
+/* scrollbar customize */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-linear-gradient(330deg, #d4fc79 0%, #96e6a1 100%);
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.logo {
+  max-width:100%; 
+  height:auto; 
+    
+}
+
+.navbar {
+  padding-top: 0;
+  
+}
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.cardAlign {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+nav {
+z-index: 1;  
+}
+
+#landing  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateY(-85px);
+  z-index: -1;
+}
+
+
+main {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+
+hr.hr-style { 
+  margin-top: 50px;
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #C3F27E, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #C3F27E, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #C3F27E, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #C3F27E, #f0f0f0); 
+}
+
+
+
+
+
+.card {
+    box-shadow: rgb(167, 167, 167) 2px 2px 2px;
+}
+
+/* Footer style */
+footer {
+  text-align: center;
+  font-size: smaller;
+}
+
+.logoWrap {
+    text-align: center;
+}
+
+.info-logo{
+    width: 200px;
+    margin: 0 auto;
+    
+}
+
+
+.container-fluid {
+    height: 80vh;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.lesson1-img {
+  width: 50rem;
+  margin: 30px;
+
+}
+
+.lesson-sub-img {
+ width: 600px;
+}
+
+.cuba-sendiri {
+  height: fit-content;
+}
+
+
+.logo {
+  width: 150px;
+}
+
+#codeEditor{
+  height: 100%;
+  font-size: smaller;
+  margin-bottom: 50%;
+  width: 100%;
+  border-radius: 2%;
+  background-color: darkslategray;
+}
+
+#codeResult{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 50%;
+  border-radius: 2%;
+  border-top: solid 23px #78C2AD;
+
+  background-color: rgba(226, 226, 226, 0.842);
+}
+
+
+.ace_editor .ace_marker-layer .ace_bracket { display: none };
+
+.web-frame {
+  
+  position: relative;
+}
+
+.web-ui {
+  position: absolute;
+  left: 20px;
+  top: 27px;
+  display: inline;
+  text-align: center;
+  line-height: 1;
+
+}
+
+.dot, .dot2, .dot3 {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot3 {
+  background-color: #F3969A;
+}
+
+.dot2 {
+  background-color: #A0D8E4;
+}
+
+.dot {
+  background-color: #FFCE67;
+}
+
+.bar {
+   background-color: white;
+   line-height: 1;
+       width: 200px;
+         height: 14px;
+         border: solid lightgrey .5px;
+  border-radius: 25px;
+    display: inline-block;
+    font-size: smaller;
+}
+
+.contoh-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+	font-size: 16px;
+	background: rgba(255, 225, 226, 0.911);
+  border: 1px solid #777;
+  border-radius: 5px;
+ 
+}
+
+/* Video CSS */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.star::before { 
+  content: " ";
+}
+.star {
+  color: lightcoral;
+}
+
+/* hover animation */
+
+
+.container .code-play {
+  margin-bottom: 30px;
+  
+}
+
+
+.back-to-top {
+  
+  display: flex;
+  justify-content: center;
+  
+}
+
+sup {
+  color: lightcoral;
+}
+
+
+
+.register-btn, .login-btn {
+  width: 145px;
+}
+
+#registerBtn {
+  width: 200px;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+
+.chatBtn {
+  margin-top: 1rem;
+cursor: pointer;
+border-radius: 25px;
+padding: 12px 30px;
+background: #02c091;
+border: none;
+color: #fff;
+font-size: 1rem;
+transition: background 0.3s ease;
+}
+.chatBtn:hover {
+background: #026d52;
+}
+.chatBtn:disabled {
+cursor: default;
+background: #7c5cbf94;
+}
+
+a .noLinkEffect {
+  text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+  /* center div  */
+  .btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav-link {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 30px auto;
+  }
+
+  .nav-link:hover {
+    color: #06472d;
+     background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+
+  }
+
+  .container bgi {
+display: flex;
+justify-content: center;
+  }
+
+  /* background clipart */
+  .bgi img{
+      
+      background-size: cover;
+  }
+  
+
+  .container .cuba-sendiri {
+    height: 100%;
+    margin-bottom: 100%;
+  }
+
+ #text-editor-row {
+   height: 540px;
+ }
+
+  .addSpace {
+    margin-bottom: 4rem;
+  }
+
+.objektif {
+display: block;
+overflow: scroll;
+margin-top: 3px;
+}
+
+
+.greet {
+  font-size: 1.5rem;
+}
+
+
+#lesson1-svg  {
+  width: 20rem;
+
+
+}
+
+
+
+}
+
+
+
+@media screen and (min-width: 992px) {
+  
+  #mobileNav {
+    margin-left: 30vw;
+  }
+  
+  
+}
+
+@media only screen and (max-width: 1316px) and (min-width: 992px)  {
+  
+
+  .navbar {
+    padding-top: 1%;
+  }
+  .navbar-brand {
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100px;
+     
+  }
+
+  
+
+  }
+@media only screen and (max-width: 768px) and (min-width: 600px)  {
+  
+  #lesson1-svg {
+    width: 20rem;
+  }
+
+  }
