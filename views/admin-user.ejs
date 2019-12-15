@@ -1,7 +1,6 @@
 <div class="sidenav">
-  <img class="logo" src="/img/logo.png" alt="logo">
-  <a href="/admin">
-    <h4>New</h4>
+  <a href="/" class="mr-2"><img class="logo " src="/img/logo.png" alt="logo">
+
   </a>
   <a href="/admin/admin-user" class="sidenav-item1" >
     <h4 style="padding-right: 0;">User List</h4>
@@ -16,7 +15,14 @@
 <div class="main-nav">
   
   
-  <h3 class="my-3"><a class="btn btn-primary" href="/admin"><i class="fa fa-plus"></i> Create New</a> User List</h3>
+<div class="d-flex justify-content-between">
+  <h3 class="my-3 text-center"><a class="btn btn-primary" href="/admin"><i class="fa fa-plus"></i> Create New</a> User List</h3>
+
+  <div class="logoutMobile my-3"> 
+    <a class="btn btn-secondary" href="/admin"><i class="fa fa-sign-out-alt"></i> Logout</a>
+ </div>
+</div>
+
   
 <div class="table-responsive">
   <table class="table table-striped table-sm adminUserTable">

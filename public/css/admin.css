@@ -1,3 +1,8 @@
+.logoutMobile {
+  display: none;
+}
+
+
 .sidenav {
   height: 100%;
   width: 160px;
@@ -35,15 +40,7 @@
   padding: 0px 10px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
 
-  .sidenav a {
-    font-size: 18px;
-  }
-}
 
 .sidenav-item a {
   border-top: rgba(218, 218, 218, 0.794) 1px solid;
@@ -75,3 +72,37 @@
   width: 500px;
 }
 
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .sidenav {
+    display: none;
+  }
+
+  .logoutMobile {
+    display: inline-block;
+  }
+
+  .d-flex h3 {
+    justify-content: center;
+  }
+
+  .main-nav {
+    margin-left: 0;
+  /* Same as the width of the sidenav */
+  font-size: 20px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  }
+
+
+}

@@ -10,24 +10,23 @@ const {
 } = require('../config/auth');
 
 
-router.get('/login', forwardAuthenticated, (req, res) => res.render('admin-login'));
+router.get('/login', forwardAuthenticated, (req, res) => res.render('admin-login', {
+      user: req.body
+    }));
 
 
 
+    // Login
+    router.post('/login', (req, res, next) => {
 
+      passport.authenticate('local', {
+        successRedirect: '/admin-user',
+        failureRedirect: '/login',
+        badRequestMessage: 'There is something wrong.', //missing credentials
+        failureFlash: true
+      })(req, res, next);
 
-
-// Login
-router.post('/login', (req, res, next) => {
-      
-        passport.authenticate('local', {  
-          successRedirect: '/admin-user',
-          failureRedirect: '/login',
-          badRequestMessage: 'There is something wrong.', //missing credentials
-          failureFlash: true
-        })(req, res, next);
-      
-      });
+    });
 
     // Logout
     router.get('/logout', (req, res) => {
@@ -65,6 +64,7 @@ router.post('/login', (req, res, next) => {
         email,
         password,
         isTeacher
+
       } = req.body;
 
 
@@ -120,11 +120,12 @@ router.post('/login', (req, res, next) => {
     }
 
 
-    router.get('/admin-user',  ensureAuthenticatedAdmin, (req, res) => {
+    router.get('/admin-user', ensureAuthenticatedAdmin, (req, res) => {
       User.find((err, docs) => {
         if (!err) {
           res.render("admin-user", {
-            list: docs
+            list: docs,
+            user: req.body
           });
         } else {
           console.log('Error in retrieving user list :' + err);
@@ -169,6 +170,6 @@ router.post('/login', (req, res, next) => {
       });
     });
 
- 
+
 
     module.exports = router;
