@@ -25,86 +25,20 @@ router.get('/register', forwardAuthenticated, (req, res) => res.render('register
 
 
 
-router.post('/register', (req, res) => {
-  const { name, email, password, password2 } = req.body;
-  let errors = [];
-
-  if (!name || !email || !password || !password2) {
-    errors.push({ msg: 'Sila lengkapkan semua ruang.' });
-  }
-
-  if (password != password2) {
-    errors.push({ msg: 'Passwords tidak sama' });
-  }
-
-  if (password.length < 6) {
-    errors.push({ msg: 'Password mesti sekurang-kurangnya 6 aksara.' });
-  }
-
-  if (errors.length > 0) {
-    res.render('register', {
-      errors,
-      name,
-      email,
-      password,
-      password2
-    });
-  } else {
-    User.findOne({ email: email }).then(user => {
-      if (user) {
-        errors.push({ msg: 'Email sudah wujud. Sila login.' });
-        res.render('register', {
-          errors,
-          name,
-          email,
-          password,
-          password2
-        });
-      } else {
-        const newUser = new User({
-          name,
-          email,
-          password
-        });
-
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newUser.password, salt, (err, hash) => {
-            if (err) throw err;
-            newUser.password = hash;
-            newUser
-              .save()
-              .then(user => {
-                req.flash(
-                  'success_msg',
-                  'Daftar berjaya. Teruskan dengan login.'
-                );
-                res.redirect('/users/login');
-              })
-              .catch(err => console.log(err));
-          });
-        });
-      }
-    });
-  }
-});
-
-
-// // Register
 // router.post('/register', (req, res) => {
 //   const { name, email, password, password2 } = req.body;
 //   let errors = [];
 
 //   if (!name || !email || !password || !password2) {
-//     errors.push({ msg: 'Sila lengkapkan semua ruangan.' });
+//     errors.push({ msg: 'Sila lengkapkan semua ruang.' });
 //   }
 
 //   if (password != password2) {
-//     errors.push({ msg: 'Passwords konfirmasi tidak sama.' });
-  
+//     errors.push({ msg: 'Passwords tidak sama' });
 //   }
 
 //   if (password.length < 6) {
-//     errors.push({ msg: 'Passwords mesti sekurang-kurangnya 6 aksara.' });
+//     errors.push({ msg: 'Password mesti sekurang-kurangnya 6 aksara.' });
 //   }
 
 //   if (errors.length > 0) {
@@ -118,7 +52,7 @@ router.post('/register', (req, res) => {
 //   } else {
 //     User.findOne({ email: email }).then(user => {
 //       if (user) {
-//         errors.push({ msg: 'Email dalam rekod sistem.' });
+//         errors.push({ msg: 'Email sudah wujud. Sila login.' });
 //         res.render('register', {
 //           errors,
 //           name,
@@ -132,10 +66,7 @@ router.post('/register', (req, res) => {
 //           email,
 //           password
 //         });
-//        if(req.body.secretCode === 'secret101'){
-//          newUser.isTeacher = true;
-//        } 
-      
+
 //         bcrypt.genSalt(10, (err, salt) => {
 //           bcrypt.hash(newUser.password, salt, (err, hash) => {
 //             if (err) throw err;
@@ -145,7 +76,7 @@ router.post('/register', (req, res) => {
 //               .then(user => {
 //                 req.flash(
 //                   'success_msg',
-//                   'Anda sudah berjaya mendaftar. Teruskan dengan login.'
+//                   'Daftar berjaya. Teruskan dengan login.'
 //                 );
 //                 res.redirect('/users/login');
 //               })
@@ -156,6 +87,78 @@ router.post('/register', (req, res) => {
 //     });
 //   }
 // });
+
+
+// Register
+router.post('/register', (req, res) => {
+  const { name, email, password, password2 } = req.body;
+  let errors = [];
+
+  if (!name || !email || !password || !password2) {
+    errors.push({ msg: 'Sila lengkapkan semua ruangan.' });
+  }
+
+  if (password != password2) {
+    errors.push({ msg: 'Passwords konfirmasi tidak sama.' });
+  
+  }
+
+  if (password.length < 6) {
+    errors.push({ msg: 'Passwords mesti sekurang-kurangnya 6 aksara.' });
+  }
+
+  if (errors.length > 0) {
+    res.render('register', {
+      errors,
+      name,
+      email,
+      password,
+      password2
+    });
+  } else {
+    User.findOne({ email: email }).then(user => {
+      if (user) {
+        errors.push({ msg: 'Email dalam rekod sistem.' });
+        res.render('register', {
+          errors,
+          name,
+          email,
+          password,
+          password2
+        });
+      } else {
+        const newUser = new User({
+          name,
+          email,
+          password
+        });
+       if(req.body.secretCode === 'secret101'){
+         newUser.isTeacher = true;
+       } 
+       if(req.body.secretCode === 'admin101'){
+         newUser.isAdmin = true;
+       }
+      
+        bcrypt.genSalt(10, (err, salt) => {
+          bcrypt.hash(newUser.password, salt, (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+            newUser
+              .save()
+              .then(user => {
+                req.flash(
+                  'success_msg',
+                  'Anda sudah berjaya mendaftar. Teruskan dengan login.'
+                );
+                res.redirect('/users/login');
+              })
+              .catch(err => console.log(err));
+          });
+        });
+      }
+    });
+  }
+});
 
 // Login
 router.post('/login', (req, res, next) => {
