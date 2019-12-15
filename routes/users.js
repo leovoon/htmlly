@@ -30,15 +30,15 @@ router.post('/register', (req, res) => {
   let errors = [];
 
   if (!name || !email || !password || !password2) {
-    errors.push({ msg: 'Please enter all fields' });
+    errors.push({ msg: 'Sila lengkapkan semua ruang.' });
   }
 
   if (password != password2) {
-    errors.push({ msg: 'Passwords do not match' });
+    errors.push({ msg: 'Passwords tidak sama' });
   }
 
   if (password.length < 6) {
-    errors.push({ msg: 'Password must be at least 6 characters' });
+    errors.push({ msg: 'Password mesti sekurang-kurangnya 6 aksara.' });
   }
 
   if (errors.length > 0) {
@@ -52,7 +52,7 @@ router.post('/register', (req, res) => {
   } else {
     User.findOne({ email: email }).then(user => {
       if (user) {
-        errors.push({ msg: 'Email already exists' });
+        errors.push({ msg: 'Email sudah wujud. Sila login.' });
         res.render('register', {
           errors,
           name,
@@ -76,7 +76,7 @@ router.post('/register', (req, res) => {
               .then(user => {
                 req.flash(
                   'success_msg',
-                  'You are now registered and can log in'
+                  'Daftar berjaya. Teruskan dengan login.'
                 );
                 res.redirect('/users/login');
               })

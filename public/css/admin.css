@@ -60,3 +60,13 @@
 .user-table {
   font-size: 1rem;
 }
+
+.adminUserTable {
+  font-size: 1rem;
+}
+
+.adminLogin {
+  margin: 0 auto;
+  padding-top: 5%;
+  width: 500px;
+}
