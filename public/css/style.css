@@ -309,6 +309,7 @@ footer {
   border-radius: 25px;
     display: inline-block;
     font-size: smaller;
+    transform: translate(10px,-5px);
 }
 
 .contoh-code {
