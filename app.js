@@ -13,8 +13,6 @@ const app = express();
 const ejsLint = require("ejs-lint");
 
 
-
-
 //Socket IO
 const socketio = require("socket.io");
 const Filter = require("bad-words");
@@ -210,6 +208,12 @@ app.post("/", (req, res) => {
   main().catch(console.error);
   res.end(res.redirect("/contact-form"));
 });
+
+
+app.use(function(req, res, next){
+  res.status(404).render('404page', {title: "Sorry, page not found"});
+});
+
 
 server.listen(PORT, err => {
   if (err) console.log("error");

@@ -45,7 +45,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/chat">Chat</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a class="nav-link " href="/info">Info</a>
         </li><li class="nav-item">
             <a class="nav-link" href="/codeplay" style="width: 140px;">Code <sup>Play</sup></a>
@@ -57,25 +57,23 @@
          <ul id="mobileNav" class="navbar-nav flex-row justify-content-center">
             
               <li class="nav-item d-flex justify-content-center align-self-center mr-3"> 
-                 <% if (user && user.isTeacher) { %>
-              <span class="badge badge-info mr-2">Guru</span> 
-                <% } %>
+                 
+
+
+              <!-- <span class="badge badge-info mr-2">Guru</span>  -->
+          
                
                  </li>
-                <% if (user) { %>
-                  
-                  <li class="nav-item d-flex justify-content-center align-self-center mr-3"> <%= user.name %>
+             
+                  <li class="nav-item d-flex justify-content-center align-self-center mr-3"> 
                   </li> 
-                  <li><a class="logout-btn btn btn-secondary " href="/users/logout"><span style="font-size: 1em; "><i class="fas fa-sign-out-alt mr-2"></i></span>Logout</a></li>
-                  <% } else { %>
+                  <!-- <li><a class="logout-btn btn btn-secondary " href="/users/logout"><span style="font-size: 1em; "><i class="fas fa-sign-out-alt mr-2"></i></span>Logout</a></li>                   %>
                 <li class="nav-item "> <a class="register-btn btn btn-info " href="/users/register"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</a></li>  
                 <li class="nav-item"> <a class="login-btn btn btn-success ml-2" href="/users/login"><span style="font-size: 1em; "><i class="fas fa-sign-in-alt mr-2"></i></i></span>Login</a> </li>
-                <% } %>
-                
-
-               
-            
               
+                 -->
+
+  
              
              
 
@@ -88,26 +86,10 @@
             
       </div>
   </nav>
-      
 
-<div class="container-fluid ">
- 
-    <div class="logoWrap mb-5">
+  <div class="container-fluid justify-content-center mt-0   ">
 
-        <img src="/img/upsi.png" class="info-logo animated bounceIn fast delay-.4s" alt="logo" />
+<img id="undraw" class="animated bounceIn delay-0.8s ml-5" src="/img/undraw404.svg" alt="page not found">
+   </div>
 
-    
-    
-    </div>
-    
-    <div class="container mb-5">
-      <p class="text-center animated fadeInUp slow delay-1s">
-        <strong>HTMLLY </strong>merupakan projek tahun akhir pelajar program AT20 Teknologi
-        Maklumat, Universiti Pendidikan Sultan Idris. Aplikasi web ini
-        dibangunkan bagi tujuan membantu pelajar sekolah menengah yang mengambil
-        mata pelajaran Asas Sains Komputer Tingkatan 1 untuk belajar tajuk Bab 4️⃣ - HTML. Ucapan penghargaan dan terima kasih juga buat pensyarah penyelia saya Puan Noriza binti Nayan atas bantuan dan nasihat yang diberi.
-      </p>
-    </div>
- </div>
-
-
+  </div>

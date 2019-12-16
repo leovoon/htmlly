@@ -48,7 +48,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/info">Info</a>
         </li><li class="nav-item">
-            <a class="nav-link" href="/codeplay" style="width: 140px;">Text Editor</a>
+            <a class="nav-link" href="/codeplay" style="width: 140px;">Code <sup>Play</sup></a>
           </li>
 
 
@@ -66,7 +66,7 @@
                   </li> 
                   <li><a class="logout-btn btn btn-secondary " href="/users/logout"><span style="font-size: 1em; "><i class="fas fa-sign-out-alt mr-2"></i></span>Logout</a></li>
                   <% } else { %>
-                <li class="nav-item "> <a class="register-btn btn btn-primary " href="/users/register"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</a></li>  
+                <li class="nav-item "> <a class="register-btn btn btn-info " href="/users/register"> <span style="font-size: 0.8em; margin-bottom: 5px; "><i class="fas fa-user-plus mr-2"></i></span>Daftar Baru</a></li>  
                 <li class="nav-item"> <a class="login-btn btn btn-success ml-2" href="/users/login"><span style="font-size: 1em; "><i class="fas fa-sign-in-alt mr-2"></i></i></span>Login</a> </li>
                 <% } %>
                 
@@ -88,16 +88,21 @@
   </nav>
 
 <main>
-  <div id="landing" class="jumbotron text-center">
+  <div id="landing-dashboard" class="jumbotron text-left">
+
+
       <div class="jumbo-text animated fadeInUp delay-1.8s">
-    <h1 class="greet">Selamat Datang! <%= user.name %>
+        <img id="undraw-dashboard" class=" pl-3 animated fadeInUp  slower delay-1s" src="/img/undraw-elemen.svg" alt="welcome">
+
+    <h1 class="greet ">Hi! <%= user.name %>
     </h1>
     <p>Belajar HTML Asas Sains Komputer Tingkatan 1</p>
 
     <% if (user && user.isTeacher) {%>
-      <!-- <a class="register-btn btn btn-lg btn-outline-primary mt-3 animated bounceIn delay-1.5s " href="/users/lesson1"></a> -->
+      <a id="registerBtn" class="register-btn btn btn-lg btn-outline-info mt-3 animated bounceIn delay-1.5s text-capitalize" href="/users/lesson1">Projek Pelajar</a>
+
       <% } else { %>
-        <a id="registerBtn" class="register-btn btn btn-lg btn-outline-primary mt-3 animated bounceIn delay-1.5s " href="/users/lesson1">Jom belajar !</a>
+        <a id="registerBtn" class="register-btn btn btn-lg btn-outline-info mt-3 animated bounceIn delay-1.5s " href="/users/lesson1">Jom belajar !</a>
       
       <% } %>
          
@@ -113,7 +118,7 @@
        
     <div class="row ">
         <div class="col-lg-4  cardAlign ">
-                <div class="card cardhover  text-white bg-secondary mb-5 animated fadeInUp delay-0.2s" style="max-width: 20rem;">
+                <div class="card cardhover  text-white bg-success mb-5 animated fadeInUp delay-0.2s" style="max-width: 20rem;">
 
                         <div class="card-header">Nota Ringkas   <a href="/lesson1" class="noLinkEffect ">
                           <span style="font-size: 1.3em; color: whitesmoke; float: right;">
@@ -202,7 +207,7 @@
                     <div class="md-form mb-3">
                     <label for="form-contact-subject" class="">Subjek</label>
                  
-                    <input type="text" name="subject" id="form-contact-subject" class="form-control text-capitalize" required>
+                    <input type="text" name="subject" id="form-contact-subject" class="form-control text-capitalize" required >
                   </div>
               </div>
             

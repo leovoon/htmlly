@@ -67,6 +67,30 @@ body {
   transition: opacity 0.5s ease;
 } */
 
+#undraw-left {
+  position: absolute;
+  width: 30rem;
+    
+    right: 350px;
+   
+  }
+
+#undraw-right {
+  position: absolute;
+  width: 30rem;
+    right: 0;
+    left: 350px;
+    
+    
+  }
+
+  #undraw-dashboard {
+    position: absolute;
+    width: 30rem;
+     top: -20px;
+      left: 550px;
+      
+  }
 
 .daftar-btn a  {
     text-decoration: none;
@@ -132,6 +156,18 @@ z-index: 1;
   width: 100%;
   transform: translateY(-85px);
   z-index: -1;
+  
+}
+#landing-dashboard  {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding-left: 10%;
+  transform: translateY(-85px);
+  z-index: -1;
+  
 }
 
 
@@ -330,7 +366,7 @@ footer {
 }
 
 sup {
-  color: lightcoral;
+  color: rgb(255, 105, 105);
 }
 
 
@@ -340,7 +376,7 @@ sup {
 }
 
 #registerBtn {
-  width: 200px;
+  width: 250px;
   font-size: 1rem;
   border-radius: 25px;
 }
@@ -378,7 +414,9 @@ a .noLinkEffect {
 }
 
 
-
+.navbar .nav-link {
+  font-size: 1rem;
+}
 
 
 
@@ -397,6 +435,7 @@ a .noLinkEffect {
     justify-content: space-evenly;
   }
 
+  
   .nav-link {
     text-align: center;
     font-size: 1.5rem;
@@ -455,6 +494,38 @@ width: 100%;
 }
 
 
+#undraw-left {
+  position: absolute;
+  width: 10rem;
+    top: 200px;
+    right: 200px;
+   
+  }
+
+#undraw-right {
+  position: absolute;
+  width: 10rem;
+    top:130px;
+    left: 200px;
+    
+    
+  }
+
+  #undraw-dashboard {
+    position: absolute;
+    width: 20rem;
+     top: 150px;
+      left: 100px;
+      
+  }
+  #landing-dashboard {
+    
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+
+
+
 
 }
 
@@ -492,3 +563,4 @@ width: 100%;
   }
 
   }
+
