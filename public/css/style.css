@@ -505,11 +505,14 @@ width: 100%;
 
 #undraw-right {
   position: absolute;
-  width: 10rem;
-    top:130px;
-    left: 200px;
+  width: 13rem;
+    top: 250px;
+    left: 150px;
     
-    
+  }
+
+  #landing h1, #landing .jumbo-text p, #register-btn{
+    transform: translateY(-40px);
   }
 
   #undraw-dashboard {
