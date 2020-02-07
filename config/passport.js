@@ -4,15 +4,19 @@ const bcrypt = require('bcryptjs');
 // Load User model
 const User = require('../models/User');
 
-module.exports = function(passport) {
+module.exports = function (passport) {
   passport.use(
-    new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+    new LocalStrategy({
+      usernameField: 'email'
+    }, (email, password, done) => {
       // Match user
       User.findOne({
         email: email
       }).then(user => {
         if (!user) {
-          return done(null, false, { message: 'Email ini tiada dalam rekod sistem.' });
+          return done(null, false, {
+            message: 'Email ini tiada dalam rekod sistem.'
+          });
         }
 
         // Match password
@@ -21,19 +25,21 @@ module.exports = function(passport) {
           if (isMatch) {
             return done(null, user);
           } else {
-            return done(null, false, { message: 'Password anda salah.' });
+            return done(null, false, {
+              message: 'Password anda salah.'
+            });
           }
         });
       });
     })
   );
 
-  passport.serializeUser(function(user, done) {
+  passport.serializeUser(function (user, done) {
     done(null, user.id);
   });
 
-  passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
+  passport.deserializeUser(function (id, done) {
+    User.findById(id, function (err, user) {
       done(err, user);
     });
   });
